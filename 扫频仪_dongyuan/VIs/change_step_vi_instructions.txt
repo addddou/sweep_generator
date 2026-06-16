@@ -1,0 +1,25 @@
+
+LabVIEW VI Snippet (需要你复制到 LabVIEW)
+-------------------------------------------
+
+控件:
+- Numeric (数值控件)
+
+Block Diagram:
+1. 在 Numeric 控件上右键 → Create → Property Node → Increment
+2. 在 Block Diagram 里放一个 Event Structure，监听 Shortcut Menu Selection (User)
+3. 在事件里，获取 Selection.Tag
+4. 用 Case Structure:
+   - 档位1 → Increment = 1
+   - 档位2 → Increment = 10
+   - 档位3 → Increment = 100
+5. 用 Property Node 写回 Numeric 的 Increment 属性
+
+初始化:
+- 用 Insert Menu Items 在 Numeric 控件 Shortcut Menu 加入档位1、档位2、档位3
+
+核心模块:
+- Property Node (Increment)
+- Event Structure
+- Insert Menu Items
+- Case Structure
